@@ -17,7 +17,7 @@ body {
 }
 
 /* Text Styles */
-a {
+nav a {
   color: var(--text);
   text-decoration: none;
 }
@@ -60,7 +60,7 @@ header nav ul li {
 /* Hero Div with Background Image */
 .hero {
   display: flex;
-  justify-content:end;
+  justify-content: end;
   align-items: end;
   width: 100%;
   height: 25vh;
@@ -68,6 +68,7 @@ header nav ul li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .hero p {
@@ -82,26 +83,52 @@ header nav ul li {
 .content {
   display: block;
   margin: auto;
-  width: 800px;
 }
 
 .section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   padding: 10px;
   margin: 5px;
 }
 
+.section .about-me {
+  order: 1;
+}
+
+#about-me .text {
+  order: 2;
+}
 
 /* About Me */
+
 h3 {
   font-size: 36px;
-  text-align: end;
+  text-align: center;
+}
+
+.about-me, 
+.contact, 
+.work 
+{
+  width: 100%;
+  border-bottom: 4px solid black;
 }
 
 .text {
-  border-left: 1px solid black;
   margin-left: 10px;
-  padding-left: 10px; 
+  padding: 10px;
   font-size: 16px;
+}
+
+.text a {
+  color: black;
+  font-size: 16px;
+}
+
+#Contact-Me .text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
