@@ -78,6 +78,13 @@ header nav ul li {
   padding: 10px;
 }
 
+/* Main */
+.content {
+  display: block;
+  margin: auto;
+  width: 800px;
+}
+
 .section {
   display: flex;
   align-items: center;
@@ -85,12 +92,16 @@ header nav ul li {
   margin: 5px;
 }
 
-.about-me {
-  font-size: large;
+
+/* About Me */
+h3 {
+  font-size: 36px;
+  text-align: end;
 }
 
-.about-me-text {
+.text {
   border-left: 1px solid black;
   margin-left: 10px;
-  padding-left: 10px;
+  padding-left: 10px; 
+  font-size: 16px;
 }
