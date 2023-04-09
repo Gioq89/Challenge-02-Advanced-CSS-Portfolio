@@ -77,3 +77,20 @@ header nav ul li {
   margin: 20px;
   padding: 10px;
 }
+
+.section {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+.about-me {
+  font-size: large;
+}
+
+.about-me-text {
+  border-left: 1px solid black;
+  margin-left: 10px;
+  padding-left: 10px;
+}
