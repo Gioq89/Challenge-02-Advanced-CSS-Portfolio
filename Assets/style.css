@@ -80,7 +80,7 @@ header nav ul li {
 }
 
 /* Main */
-.content {
+main {
   display: block;
   margin: auto;
 }
@@ -108,10 +108,9 @@ h3 {
   text-align: center;
 }
 
-.about-me, 
-.contact, 
-.work 
-{
+.about-me,
+.contact,
+.work {
   width: 100%;
   border-bottom: 4px solid black;
 }
@@ -131,4 +130,60 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.work {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  height: 200px;
+  width: 400px;
+  border: 5px solid rgb(46, 166, 206);
+  justify-content: end;
+  align-items: end;
+  background-size: contain; 
+ 
+}
+
+.image1{
+  background-image: url("./images/02-portfolio-1.jpg");
+  
+}
+
+.image2{
+  background-image: url("./images/02-portfolio-2.jpg");
+}
+.box p {
+  background-color:rgb(46, 166, 206);
+  padding: 10px;
+
+}
+
+@media screen and (min-width: 768px) {
+  .about-me,
+  .contact,
+  .work {
+    border-right: 4px solid black;
+    border-bottom: 0;
+    flex: 2 1 100px;
+  }
+
+  .section {
+    flex-direction: row;
+  }
+
+  h3 {
+    width: 170px;
+    font-size: 36px;
+    text-align: end;
+    padding: 10px;
+  }
+
+  main {
+    width: 80%;
+    margin: auto;
+  }
 }
