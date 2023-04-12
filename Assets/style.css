@@ -133,7 +133,6 @@ h3 {
 }
 
 .img-container {
-  max-width: 800px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -142,39 +141,54 @@ h3 {
 .box {
   margin: 10px;
   background: teal;
-  width:370px;
-  height:125px;
+  width: 370px;
+  height: 125px;
   border: 5px solid lightblue;
   display: flex;
-  align-items: end;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  padding-bottom: 10px;
+  flex: 1 0 48%;
 }
 
 .box p {
   display: flex;
-  width: 100px;
   color: black;
-  background: lightblue;
-  padding: 15px;
+  padding: 5px;
+  min-width: fit-content;
 }
 
 .main-box {
   display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  padding-bottom: 5%;
   margin: 10px;
   background: teal;
-  width:100px;
-  height:400px;
-  flex-basis: 100% ;
+  width: 100px;
+  height: 400px;
+  flex-basis: 100%;
   border: 5px solid lightblue;
-  align-items: end;
 }
 
 .main-box p {
-  display: flex;
-  width: 100px;
+  width: 200px;
   color: black;
   background: lightblue;
-  padding: 15px;
-  
+  padding: 5px;
+}
+
+.label-bg {
+  background: lightblue;
+  width: 160px;
+}
+
+.box p:nth-child(1),
+.main-box p:nth-child(1) {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .image-1 {
@@ -207,13 +221,12 @@ h3 {
   .about-me,
   .contact,
   .work {
-    border-right: 4px solid black;
     border-bottom: 0;
     flex: 2 1 100px;
   }
-
   .section {
     flex-direction: row;
+    align-items: start;
   }
 
   h3 {
@@ -226,5 +239,11 @@ h3 {
   main {
     width: 80%;
     margin: auto;
+  }
+
+  #about-me .text,
+  .img-container
+   {
+      border-left: 5px solid black;
   }
 }
