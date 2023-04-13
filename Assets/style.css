@@ -1,7 +1,7 @@
 /* Universal */
 :root {
   --background-color: #edeef6;
-  --text-color: #31333d;
+  --text-color: #555;
   --text-font: "League Spartan", Arial, sans-serif;
 }
 
@@ -22,6 +22,10 @@ nav a {
   text-decoration: none;
 }
 
+.text p {
+  margin: 10px;
+}
+
 p {
   font-size: 16px;
 }
@@ -39,7 +43,6 @@ header h1 {
   font-size: 48px;
   background: lightblue;
   min-width: fit-content;
-  p
 }
 
 header nav {
@@ -63,22 +66,25 @@ header nav ul li {
 /* Hero Div with Background Image */
 .hero {
   display: flex;
-  justify-content: end;
-  align-items: end;
+  justify-content: center;
+  align-items: center;
   padding-bottom: 20px;
   width: 100%;
-  height: 30vh;
-  background-image: url("./images/02-hero-bg.jpg");
+  height: 55vh;
+  background-image: url("./images/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
 }
 
-.hero img {
-  font-size: 16px;
-  color: black;
-  border: 5px solid black;
+
+.profile-pic {
+  border: 4px solid #fff;
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  margin: 20px;
 }
 
 /* Main */
@@ -92,7 +98,7 @@ main {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  margin: 5px;
+  margin: 20px;
 }
 
 .section .about-me {
@@ -114,11 +120,10 @@ h3 {
 .contact,
 .work {
   width: 100%;
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid rgb(73, 184, 221);
 }
 
 .personal-info {
-  margin-left: 10px;
   padding: 10px;
   font-size: 16px;
 }
@@ -132,6 +137,8 @@ h3 {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
 }
 
 .img-container {
@@ -142,16 +149,16 @@ h3 {
 
 .box {
   margin: 10px;
-  background: teal;
-  width: 370px;
-  height: 125px;
-  border: 5px solid lightblue;
+  border: 5px solid #fff;
   display: flex;
   flex-direction: column;
   align-items: start;
-  justify-content: end;
+  justify-content: center;
   padding-bottom: 10px;
-  flex: 1 0 48%;
+  flex-grow: 1;
+  flex-basis: 18em;
+  min-height: 150px;
+  box-shadow: 10px 5px 10px rgba(0,0,0,.2);
 }
 
 .box p {
@@ -168,22 +175,23 @@ h3 {
   justify-content: end;
   padding-bottom: 5%;
   margin: 10px;
-  background: teal;
-  width: 100px;
-  height: 400px;
+
+  min-width: 100px;
+  min-height: 175px;
   flex-basis: 100%;
-  border: 5px solid lightblue;
+  border: 5px solid #fff;
+  box-shadow: 10px 5px 10px rgba(0,0,0,.2);
 }
 
 .main-box p {
   width: 200px;
   color: black;
-  background: lightblue;
+  background: #fff;
   padding: 5px;
 }
 
 .label-bg {
-  background: lightblue;
+  background: #fff;
   width: 160px;
 }
 
@@ -219,7 +227,14 @@ h3 {
   background-position: center;
 }
 
+/* Medium screen devices (768px and above) */
 @media screen and (min-width: 768px) {
+  
+  .hero {
+    justify-content: start;
+  }
+  
+  
   .about-me,
   .contact,
   .work {
@@ -230,23 +245,47 @@ h3 {
     flex-direction: row;
     align-items: start;
   }
-
+  
   h3 {
     width: 170px;
     font-size: 36px;
     text-align: end;
     padding: 10px;
   }
-
+  
   main {
     width: 80%;
     margin: auto;
   }
-
+  
   #about-me .text,
   .img-container,
- .personal-info {
-      border-left: 5px solid blue
-      ;
+  .personal-info {
+    border-left: 5px solid #555;
+    ;
+  }
+  
+  
+}
+
+/* Big screen devices (889px and above) */
+@media only screen and (min-width: 889px) {
+  .main-box {
+    min-width: 300px;
+    min-height: 300px
+  }
+  .box {
+    flex-basis: 15em;
+  }
+}
+ 
+/* Extra big screen devices (1200px and above) */
+@media only screen and (min-width: 1200px) {
+  .main-box {
+    min-width: 300px;
+    min-height: 300px
+  }
+  .box {
+    flex-basis: 18em;
   }
 }
