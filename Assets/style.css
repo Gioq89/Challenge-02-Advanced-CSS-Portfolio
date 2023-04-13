@@ -70,7 +70,7 @@ header nav ul li {
   align-items: center;
   padding-bottom: 20px;
   width: 100%;
-  height: 55vh;
+  height: 30vh;
   background-image: url("./images/hero.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -80,7 +80,7 @@ header nav ul li {
 
 
 .profile-pic {
-  border: 4px solid #fff;
+  border: 4px solid var(--text-color);
   border-radius: 50%;
   width: 175px;
   height: 175px;
